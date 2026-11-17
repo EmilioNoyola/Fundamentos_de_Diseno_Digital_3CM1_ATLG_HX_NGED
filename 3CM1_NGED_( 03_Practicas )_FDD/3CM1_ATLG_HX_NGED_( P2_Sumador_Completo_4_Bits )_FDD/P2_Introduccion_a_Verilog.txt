@@ -1,0 +1,30 @@
+Introducción a Verilog (VHDL)
+
+-> Ingresar a ISE Project Navigator
+
+-> New Project 
+	Family - Spartan6
+	Device - xc6slx16
+	Package - csg324
+
+-> Clic derecho sobre Device
+	New Source
+	-> Verilog Module (P1)
+	-> Colocamos variables (a, b, c, d, s)
+
+-> Sintáxis básica
+	assign s = (a&c) | (b&c) | d;
+	reg a; // Entrada
+	wire s: // Salida
+	-> Guardar
+	-> Synthesize 
+		-> Check Syntax
+	-> View RTL Schematic
+		-> Create RTL Schematic
+			Crtl + A -> Add
+
+	-> Selecciono la FPGA
+		-> New source 
+			-> Verilog Test Fixture -> TB_P1
+		-> Menú Simulation
+		

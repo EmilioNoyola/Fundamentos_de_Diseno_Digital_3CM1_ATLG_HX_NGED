@@ -1,0 +1,26 @@
+SUMADOR COMPLETO DE 4 BITS - VERILOG (FPGA / CPLD / SPLD)
+=========================================================
+Verificado: 512 de 512 combinaciones correctas (Icarus Verilog 12) en las 4 descripciones.
+
+rtl/                      Codigo Verilog comun para FPGA y CPLD
+  v1_5chips/              Version 1: P=A^B, G=A&B, S=P^Cin, Cout=G|(P&Cin)
+  v2_7chips/              Version 2: S=A^B^Cin, Cout=AB+ACin+BCin (sin XOR en el acarreo)
+sim/tb_sumador_4bits.v    Testbench exhaustivo (solo simulacion, NO se sintetiza)
+
+fpga_de10lite/            Proyectos Quartus listos (MAX 10, Terasic DE10-Lite)
+  pines_de10lite.tcl      Pines para cargar con Tools > Tcl Scripts
+  v1/  v2/                Abre el .qpf con Quartus (File > Open Project)
+cpld_maxii_epm240/        Proyectos Quartus listos (MAX II EPM240T100C5)
+  v1/  v2/                Pines: los eliges tu segun tu tarjeta (ver .qsf)
+spld_gal22v10/
+  verilog_isplever/       Verilog autocontenido para Lattice ispLEVER Classic (GAL22V10)
+  wincupl/                Equivalente en CUPL (respaldo) -> genera el .jed
+otras_tarjetas/           Basys 3 (Vivado, .xdc) y plantilla Cyclone IV
+
+Simular en tu PC (Icarus Verilog para Windows):
+  iverilog -o tb rtl/v1_5chips/*.v rtl/v2_7chips/*.v spld_gal22v10/verilog_isplever/*.v sim/tb_sumador_4bits.v
+  vvp tb
+  gtkwave sumador_4bits.vcd
+
+IMPORTANTE: no muevas las carpetas de lugar; los proyectos de Quartus buscan
+el codigo en ../../rtl/ (rutas relativas).

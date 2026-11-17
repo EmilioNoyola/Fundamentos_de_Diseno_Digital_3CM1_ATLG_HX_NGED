@@ -1,0 +1,55 @@
+# ============================================================================
+#  sumador_4bits.qsf  -  Configuración del proyecto y asignación de pines
+#  Tarjeta: Terasic DE2-115 (Cyclone IV E  EP4CE115F29C7)
+#  Pines tomados del manual de usuario de la DE2-115 (tablas 4-1 y 4-3).
+#
+#  Si tu tarjeta es otra, cambia DEVICE y los set_location_assignment
+#  (ver la carpeta pines_otras_tarjetas).
+# ============================================================================
+
+# ---------- Dispositivo ----------
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY sumador_4bits
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+
+# ---------- Archivos de diseño ----------
+set_global_assignment -name VERILOG_FILE rtl/sumador_completo.v
+set_global_assignment -name VERILOG_FILE rtl/sumador_4bits.v
+
+# ---------- Entradas: interruptores deslizables ----------
+#   SW[8]      -> Cin
+#   SW[7..4]   -> A[3..0]
+#   SW[3..0]   -> B[3..0]
+set_location_assignment PIN_AC25 -to Cin
+set_location_assignment PIN_AB26 -to A[3]
+set_location_assignment PIN_AD26 -to A[2]
+set_location_assignment PIN_AC26 -to A[1]
+set_location_assignment PIN_AB27 -to A[0]
+set_location_assignment PIN_AD27 -to B[3]
+set_location_assignment PIN_AC27 -to B[2]
+set_location_assignment PIN_AC28 -to B[1]
+set_location_assignment PIN_AB28 -to B[0]
+
+# ---------- Salidas: LEDs rojos ----------
+#   LEDR[4] = Cout, LEDR[3..0] = S[3..0]
+#   Leídos de izquierda a derecha, LEDR4..LEDR0 forman el resultado de 5 bits.
+set_location_assignment PIN_F18 -to Cout
+set_location_assignment PIN_F21 -to S[3]
+set_location_assignment PIN_E19 -to S[2]
+set_location_assignment PIN_F19 -to S[1]
+set_location_assignment PIN_G19 -to S[0]
+
+# ---------- Estándar eléctrico de los pines (bancos a 2.5 V en la DE2-115) ----------
+set_instance_assignment -name IO_STANDARD "2.5 V" -to Cin
+set_instance_assignment -name IO_STANDARD "2.5 V" -to A[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to B[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to S[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to Cout
+
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

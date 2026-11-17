@@ -1,0 +1,4 @@
+# Proyecto de Quartus Prime - Sumador de 4 bits a partir de sumadores completos
+QUARTUS_VERSION = "20.1"
+DATE = "30 de septiembre de 2026"
+PROJECT_REVISION = "P2_03_Cyclone_IV_FDD"

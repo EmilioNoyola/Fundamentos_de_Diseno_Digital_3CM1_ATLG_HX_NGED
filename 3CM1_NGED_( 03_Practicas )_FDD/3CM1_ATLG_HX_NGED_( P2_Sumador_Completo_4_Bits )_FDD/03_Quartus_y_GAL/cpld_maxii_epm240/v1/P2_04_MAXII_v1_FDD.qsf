@@ -1,0 +1,20 @@
+# Proyecto Quartus Prime Lite - Sumador de 4 bits VERSION 1
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM240T100C5
+set_global_assignment -name TOP_LEVEL_ENTITY sumador_4bits_v1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name VERILOG_FILE ../../rtl/v1_5chips/sumador_completo_v1.v
+set_global_assignment -name VERILOG_FILE ../../rtl/v1_5chips/sumador_4bits_v1.v
+# ---------------- Pines MAX II EPM240T100C5 ----------------
+# No se fijan pines aqui: cada tarjeta "minima" de EPM240 saca pines distintos.
+# 1) Compila una vez: Quartus elegira pines y los escribira en output_files/*.pin
+# 2) O fijalos tu en Assignments > Pin Planner usando los numeros impresos
+#    junto a los headers de TU tarjeta. Ejemplo de sintaxis:
+# set_location_assignment PIN_xx -to A[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to B[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Cin
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to S[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Cout
+
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
