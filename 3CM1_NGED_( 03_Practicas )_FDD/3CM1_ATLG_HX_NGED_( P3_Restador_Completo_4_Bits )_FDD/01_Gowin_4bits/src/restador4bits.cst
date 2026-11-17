@@ -1,0 +1,57 @@
+// ==========================================
+// PRIMER NUMERO: A
+// ==========================================
+
+IO_LOC "a[0]" 29; // Nodo 54
+IO_PORT "a[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC "a[1]" 30; // Nodo 53
+IO_PORT "a[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC "a[2]" 33; // Nodo 52
+IO_PORT "a[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC "a[3]" 34; // Nodo 51
+IO_PORT "a[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+
+// ==========================================
+// SEGUNDO NUMERO: B
+// ==========================================
+
+IO_LOC "b[0]" 25; // Nodo 58
+IO_PORT "b[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC "b[1]" 26; // Nodo 57
+IO_PORT "b[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC "b[2]" 27; // Nodo 56
+IO_PORT "b[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC "b[3]" 28; // Nodo 55
+IO_PORT "b[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+
+// ==========================================
+// SALIDAS DE DIFERENCIA
+// ==========================================
+
+IO_LOC "diff[0]" 40; // Nodo 50
+IO_PORT "diff[0]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "diff[1]" 35; // Nodo 49
+IO_PORT "diff[1]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "diff[2]" 41; // Nodo 48
+IO_PORT "diff[2]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "diff[3]" 42; // Nodo 47
+IO_PORT "diff[3]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+
+// ==========================================
+// PRESTAMO FINAL
+// ==========================================
+
+IO_LOC "b_out" 51; // Nodo 46
+IO_PORT "b_out" IO_TYPE=LVCMOS33 DRIVE=8;
