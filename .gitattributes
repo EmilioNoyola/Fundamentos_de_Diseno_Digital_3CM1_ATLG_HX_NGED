@@ -1,3 +1,3 @@
 * -text
-"3CM1_NGED_( 03_Practicas )_FDD/3CM1_ATLG_HX_NGED_( P2_Sumador_Completo_4_Bits )_FDD/Esquema_Manuscrito_Sumador_4_Bits.png" filter=lfs diff=lfs merge=lfs -text
-"3CM1_NGED_( 05_Recursos_Complementarios )_FDD/FPGA_Cyclone_IV/Kit_FPGA_Altera_Cyclone_IV.zip" filter=lfs diff=lfs merge=lfs -text
+"03_practicas/p02_sumador_4_bits/esquema_manuscrito_sumador_4_bits.png" filter=lfs diff=lfs merge=lfs -text
+"05_recursos/fpga_cyclone_iv/kit_fpga_altera_cyclone_iv.zip" filter=lfs diff=lfs merge=lfs -text

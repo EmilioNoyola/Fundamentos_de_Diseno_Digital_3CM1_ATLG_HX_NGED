@@ -66,3 +66,5 @@ Thumbs.db
 transcript
 msim_transcript
 .env_list_file
+
+**/.simulacion/
