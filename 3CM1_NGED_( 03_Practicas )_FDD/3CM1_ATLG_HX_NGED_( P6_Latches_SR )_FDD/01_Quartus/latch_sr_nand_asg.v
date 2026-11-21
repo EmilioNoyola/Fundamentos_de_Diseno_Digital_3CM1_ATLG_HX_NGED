@@ -1,7 +1,4 @@
-// ============================================================
-//  Latch SR con entrada de control C, compuertas NAND
-//  Arquitectura de FLUJO DE DATOS: ecuaciones con assign
-// ============================================================
+`timescale 1us/1us
 module latch_sr_nand_asg (
     input  wire S,
     input  wire R,
@@ -12,8 +9,8 @@ module latch_sr_nand_asg (
     (* keep = 1 *) wire s_n;
     (* keep = 1 *) wire r_n;
 
-    assign s_n = ~(S & C);     // NAND = AND negada
-    assign r_n = ~(R & C);
-    assign Q   = ~(s_n & Qn);
-    assign Qn  = ~(r_n & Q);
+    assign #1 s_n = ~(S & C);
+    assign #1 r_n = ~(R & C);
+    assign #1 Q   = ~(s_n & Qn);
+    assign #1 Qn  = ~(r_n & Q);
 endmodule

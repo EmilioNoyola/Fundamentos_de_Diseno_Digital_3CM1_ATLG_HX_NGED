@@ -1,7 +1,4 @@
-// ============================================================
-//  Latch SR con entrada de control C, compuertas NOR
-//  Arquitectura de FLUJO DE DATOS: ecuaciones con assign
-// ============================================================
+`timescale 1us/1us
 module latch_sr_nor_asg (
     input  wire S,
     input  wire R,
@@ -12,8 +9,8 @@ module latch_sr_nor_asg (
     (* keep = 1 *) wire s_g;
     (* keep = 1 *) wire r_g;
 
-    assign s_g = S & C;
-    assign r_g = R & C;
-    assign Q   = ~(r_g | Qn);  // NOR = OR negada
-    assign Qn  = ~(s_g | Q);
+    assign #1 s_g = S & C;
+    assign #1 r_g = R & C;
+    assign #1 Q   = ~(r_g | Qn);
+    assign #1 Qn  = ~(s_g | Q);
 endmodule
