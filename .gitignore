@@ -52,3 +52,17 @@
 !.env.sample
 desktop.ini
 Thumbs.db
+
+# Archivos regenerables de Quartus, Gowin y Questa
+**/simulation/
+**/rtl_work/
+**/gate_work/
+**/p6_work/
+**/work/
+*.rpt
+*.bak1
+*.vo
+*.sft
+transcript
+msim_transcript
+.env_list_file

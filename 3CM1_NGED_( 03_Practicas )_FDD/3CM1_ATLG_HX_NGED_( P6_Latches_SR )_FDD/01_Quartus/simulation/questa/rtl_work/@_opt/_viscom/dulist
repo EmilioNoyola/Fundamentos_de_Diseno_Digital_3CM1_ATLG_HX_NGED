@@ -1,5 +1,0 @@
-1 18 latch_sr_nand_prim 4 fast 62 C:/Users/noyol/Documents/p6_latches/simulation/questa/rtl_work 0 0 0 0 28 0
-1 17 latch_sr_nand_asg 4 fast 62 C:/Users/noyol/Documents/p6_latches/simulation/questa/rtl_work 0 0 0 0 36 0
-1 17 latch_sr_nor_prim 4 fast 62 C:/Users/noyol/Documents/p6_latches/simulation/questa/rtl_work 0 0 0 0 28 0
-1 16 latch_sr_nor_asg 4 fast 62 C:/Users/noyol/Documents/p6_latches/simulation/questa/rtl_work 0 0 0 0 32 0
-1 10 tb_latches 4 fast 62 C:/Users/noyol/Documents/p6_latches/simulation/questa/rtl_work 0 0 180224 0 306 0
