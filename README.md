@@ -48,6 +48,7 @@ El programa describe el alcance de la asignatura. Las carpetas siguientes muestr
 | [Prácticas](03_practicas/) · `03_practicas` | Falstad/Tinkercad, sumadores, restador, BCD a 7 segmentos, 555 y latches. |
 | [Guías](04_guias/) · `04_guias` | Enteros con signo, Karnaugh, Verilog, aritmética digital y memoria. |
 | [Recursos](05_recursos/) · `05_recursos` | Ejemplos de Tang Nano 9K y material de Cyclone IV. |
+| [Apuntes](06_apuntes/) · `06_apuntes` | Cuaderno de clase. |
 
 Los números de actividad conservan la identificación de las entregas; las guías se distinguen por el prefijo `g` y las prácticas por `p` o `act`, según la materia.
 
