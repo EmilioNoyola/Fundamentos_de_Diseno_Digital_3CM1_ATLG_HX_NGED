@@ -68,3 +68,7 @@ msim_transcript
 .env_list_file
 
 **/.simulacion/
+
+# Estado de Gowin y salida regenerable de la simulacion del sumador
+*_gprj.user
+/03_practicas/p02_sumador_4_bits/03_quartus_y_gal/1_cyclone_iv_quartus/sim/resultado_simulacion.txt
