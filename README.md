@@ -65,6 +65,19 @@ Los números de actividad conservan la identificación de las entregas; las guí
 
 Conserva cada proyecto con sus fuentes, restricciones y archivos de configuración. Las carpetas académicas usan nombres ASCII sin espacios; los identificadores de módulos y proyectos mantienen los nombres que requieren las herramientas.
 
+### Sumadores de cuatro bits
+
+En [Quartus y GAL](03_practicas/p02_sumador_4_bits/03_quartus_y_gal/), cada implementación conserva sus fuentes y restricciones:
+
+| Implementación | Uso |
+|---|---|
+| [Cyclone IV / DE2-115](03_practicas/p02_sumador_4_bits/03_quartus_y_gal/1_cyclone_iv_quartus/LEEME.md) | Proyecto Quartus, mapa de pines y simulación de 512 combinaciones. |
+| [GAL22V10 / ATF22V10](03_practicas/p02_sumador_4_bits/03_quartus_y_gal/2_gal22v10/LEEME.md) | Distribución de pines, compilación, programación y montaje. |
+| [MAX 10 / DE10-Lite](03_practicas/p02_sumador_4_bits/03_quartus_y_gal/fpga_de10lite/) | Proyectos `v1` y `v2`; los pines se cargan con `pines_de10lite.tcl`. |
+| [MAX II / EPM240](03_practicas/p02_sumador_4_bits/03_quartus_y_gal/cpld_maxii_epm240/) | Proyectos `v1` y `v2`; los pines deben ajustarse a la tarjeta. |
+
+Las variantes `v1_5chips` y `v2_7chips` están en `03_quartus_y_gal/rtl/`. El banco de pruebas común está en `03_quartus_y_gal/sim/tb_sumador_4bits.v` y se compila junto con ambas variantes RTL y los módulos de `spld_gal22v10/verilog_isplever/`. Deben conservarse sus rutas relativas: los proyectos Quartus buscan las fuentes en `../../rtl/`.
+
 ### Simular Latches SR
 
 Desde la raíz del repositorio, con Questa instalado y su licencia configurada:
